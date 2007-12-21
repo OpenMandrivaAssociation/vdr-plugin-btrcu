@@ -13,6 +13,7 @@ License:	GPL
 URL:		http://www.k13zoo.de/vdr/
 Source:		http://www.k13zoo.de/vdr/vdr-%plugin-%version.tar.bz2
 Patch1:		btrcu-0.0.1-gcc4.patch
+BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	vdr-devel >= 1.4.1-6
 Requires:	vdr-abi = %vdr_abi
 
