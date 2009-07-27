@@ -2,7 +2,7 @@
 %define plugin	btrcu
 %define name	vdr-plugin-%plugin
 %define version	0.0.1
-%define rel	17
+%define rel	18
 
 Summary:	VDR plugin: Controls VDR through a Bluetooth mobile phone
 Name:		%name
