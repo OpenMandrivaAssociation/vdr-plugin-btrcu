@@ -1,0 +1,21 @@
+diff -Nurp btrcu-0.0.1/btrcu.c btrcu-0.0.1-f/btrcu.c
+--- btrcu-0.0.1/btrcu.c	2004-12-31 06:52:42.000000000 +0200
++++ btrcu-0.0.1-f/btrcu.c	2006-06-15 21:47:54.000000000 +0300
+@@ -18,7 +18,7 @@
+ #include <vdr/remote.h>
+ #include <vdr/tools.h>
+ #include "pduconv.h"
+-#define DPRINT(ARGS...) printf("[BtRCU] " ##ARGS)
++#define DPRINT(FMT, ARGS...) printf("[BtRCU] " FMT, ##ARGS)
+ enum {
+ 	OK=1,
+ 	ERROR,
+@@ -83,7 +83,7 @@ int cBtRCU::accept() {
+ 		   (buf[2*i] >= 'A') &&
+ 		   (buf[2*i] <= 'F'))
+ 	    {
+-		(unsigned char)buf[i]= PACK(buf[2*i])*16+PACK(buf[2*i+1]);
++		buf[i]= PACK(buf[2*i])*16+PACK(buf[2*i+1]);
+ 		i++;
+ 	    }
+ 	    pdu_to_ascii((unsigned char *)buf+27,i-27, smstext);
