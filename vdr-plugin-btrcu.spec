@@ -1,13 +1,9 @@
-
 %define plugin	btrcu
-%define name	vdr-plugin-%plugin
-%define version	0.0.1
-%define rel	19
 
 Summary:	VDR plugin: Controls VDR through a Bluetooth mobile phone
-Name:		%name
-Version:	%version
-Release:	%rel
+Name:		vdr-plugin-%plugin
+Version:	0.0.1
+Release:	20
 Group:		Video
 License:	GPL
 URL:		http://www.k13zoo.de/vdr/
@@ -37,12 +33,6 @@ param=--device=BTRCU_DEV
 %vdr_plugin_install
 
 install -D -m755 btrcu.sh.example %{buildroot}%{vdr_plugin_cfgdir}/btrcu.sh
-
-%post
-%vdr_plugin_post %plugin
-
-%postun
-%vdr_plugin_postun %plugin
 
 %files -f %plugin.vdr
 %defattr(-,root,root)
