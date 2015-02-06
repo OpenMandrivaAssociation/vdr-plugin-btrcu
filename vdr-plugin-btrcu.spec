@@ -3,7 +3,7 @@
 Summary:	VDR plugin: Controls VDR through a Bluetooth mobile phone
 Name:		vdr-plugin-%plugin
 Version:	0.0.1
-Release:	20
+Release:	21
 Group:		Video
 License:	GPL
 URL:		http://www.k13zoo.de/vdr/
