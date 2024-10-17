@@ -6,7 +6,7 @@ Version:	0.0.1
 Release:	23
 Group:		Video
 License:	GPL
-URL:		http://www.k13zoo.de/vdr/
+URL:		https://www.k13zoo.de/vdr/
 Source:		http://www.k13zoo.de/vdr/vdr-%plugin-%{version}.tar.gz
 Patch1:		btrcu-0.0.1-gcc4.patch
 BuildRequires:	vdr-devel >= 1.6.0
